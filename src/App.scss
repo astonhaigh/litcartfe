@@ -1,0 +1,360 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-content {
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/*
+Fonts
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap');
+
+$mainBlue: #4A6DA7;
+$mainGrey: #8698B5;
+$secondaryBlue: #6B9FF2;
+$fontReg: 'Poppins', sans-serif;
+
+body {
+  font-family: $fontReg;
+}
+.bg-grad {
+  background: rgb(46,80,138);
+  background: linear-gradient(50deg, rgba(46,80,138,1) 25%, rgba(149,189,255,1) 82%);
+
+}
+
+.booking-container {
+  iframe {
+    background-color: white;
+    background-image: url('../public/loading.gif');
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  }
+}
+
+
+.logo-container {
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .logo-el {
+    display: flex;
+  }
+  .logo-text {
+    position: relative;
+    top: 7px;
+    margin-left: 7px;
+    color: white;
+  }
+}
+
+.nav-bar {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 55px;
+  > section {
+    flex: 1;
+    display: flex;
+  }
+  .logo-container {
+    justify-content: flex-start;
+  }
+  .home {
+    justify-content: flex-end;
+  }
+}
+
+.home-button {
+  a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-image: url("../public/home.png");
+    background-position: 0px 3px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.landing-updates {
+  color: white;
+  // border-radius: 8px;
+  // border: solid #717171 1px;
+  // background-color: #e6e6e6;
+  // padding: 5px 5px 10px 40px;
+  // font-size: 12px;
+  // text-align: left;
+  // position: relative;
+  // &:before {
+  //   content: '';
+  //   display: block;
+  //   background-image: url('../public/ex.png');
+  //   width: 25px;
+  //   height: 25px;
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  //   top: 6px;
+  //   left: 9px;
+  //   position: absolute;
+  // }
+  // .updates-title {
+  //   h3 {
+  //     margin: 4px 0 5px 0;
+  //   }
+  // }
+}
+
+.landing-page {
+  h1 {
+    margin: 0;
+    color: white;
+    font-size: 35px;
+  }
+  .landing-content {
+    color: white;
+    padding: 15px;
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+  .landing-intro {
+    margin-bottom: 20px;
+    p {
+      margin: 0;
+    }
+    .intro-content {
+      padding: 30px;
+    }
+    .intro-image {
+      display: none;
+      .image-el {
+        max-width: 180px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.day-list-container {
+  background-color: white;
+  padding: 20px 0;
+}
+
+.daysList-container{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  .dayDate-item {
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+    a {
+      display: block;
+      width: 100%;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.2s ease-in;
+      text-decoration: none;
+      &:hover {
+        box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+        .banner {
+          width: 100%;
+          padding: 5px;
+          box-sizing: border-box;
+          background-color: $mainBlue;
+          color: white;
+        }
+        .dow {
+          span {
+            top: -5px;
+          }
+        }
+      }
+      .banner {
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        background-color: $secondaryBlue;
+        color: white;
+        font-size: 12px;
+        transition: all 0.2s ease-in;
+        font-weight: bold;
+      }
+      .dow {
+        padding: 30px 10px;
+        box-sizing: border-box;
+        font-size: 18px;
+        color: black;
+        span {
+          position: relative;
+          top: 0;
+          transition: all 0.2s ease-in;
+        }
+      }
+    }
+  }
+}
+
+.location { 
+  margin-bottom: 20px;
+  &:nth-child(odd){
+    
+      .location-item {
+        &:nth-child(odd){
+          background-color: #ececec;
+        }
+      }
+
+  }
+  &:nth-child(even){
+      .location-item {
+        &:nth-child(even){
+          background-color: #ececec;
+        }
+      }
+  }
+}
+.locations-container {
+  border-right: 2px solid white;
+  .location-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    
+  
+
+    > div {
+      flex: 1;
+      padding: 10px 5px;
+    }
+    .location-slot {
+      width: 40%;
+    }
+    .available {
+      width: 60%;
+      span {
+        font-weight: 600;
+        font-style: italic;
+        color: #00a301;
+      }
+    }
+  }
+  .location-title {
+    padding: 5px;
+    background-color: $secondaryBlue; 
+    h3 {
+      margin: 0;
+      color: white;
+    }
+  }
+}
+
+.button-container {
+  padding: 25px 0;
+  a {
+    display: inline-block;
+    text-decoration: none;
+    background: $secondaryBlue;
+    transition: all 0.2s ease;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    position: relative;
+    top: 0;
+    font-weight: bold;
+    &:hover {
+      background-color: $mainBlue;
+      top: -3px;
+    }
+  }
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  .locations-container {
+    display: flex;
+    // .location-title {
+    //   border-right: 2px solid white;
+    // }
+    .location {
+      flex: 1;
+      width: calc(100% / 3);
+      border-left: 2px solid white;
+      border-right: 2px solid white;
+    }
+  }
+  .daysList-container{
+    .dayDate-item {
+      width: 25%;
+    }
+  }
+  .landing-page {
+    h1 {
+      font-size: 45px;
+    }
+    .landing-intro {
+      margin-bottom: 20px;
+      display: flex;
+      > div {
+        width: 50%;
+      }
+      .intro-content {
+        text-align: right;
+        padding: 30px;
+      }
+      .intro-image {
+        display: block;
+      }
+    }
+  }
+}
