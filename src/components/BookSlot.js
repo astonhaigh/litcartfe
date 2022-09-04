@@ -9,7 +9,7 @@ class BookSlot extends Component {
         
         <div className="booking-container">
           <div className='form-container'>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfntOGqND10RwKggRcowT809MS91nL8OkiomL7Qoyoaayuuyg/viewform?embedded=true" width="100%" height="500" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfntOGqND10RwKggRcowT809MS91nL8OkiomL7Qoyoaayuuyg/viewform?embedded=true" width="100%" height="100vh" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
           </div>
         </div>
         

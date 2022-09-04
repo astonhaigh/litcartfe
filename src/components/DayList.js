@@ -157,7 +157,7 @@ class DayList extends Component {
          
                 <div className="dayDate-item" key={days.id}>
                   <Link to={`days/${days.id}`}>
-                    <div className="banner">
+                    <div className={`banner ${dotw}`}>
                       <span>{monthName} {dateName}</span>
                     </div>
                     <div className="main-tile">

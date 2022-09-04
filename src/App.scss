@@ -12,7 +12,12 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.form-container {
+  height: 100vh;
+  iframe {
+    height: 100vh;
+  }
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -50,6 +55,7 @@ Fonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap');
 
 $mainBlue: #4A6DA7;
+$primaryGreen: #8CA641;
 $mainGrey: #8698B5;
 $secondaryBlue: #6B9FF2;
 $fontReg: 'Poppins', sans-serif;
@@ -64,12 +70,14 @@ body {
 }
 
 .booking-container {
-  iframe {
-    background-color: white;
+  min-height: 400px;
+  background-color: white;
     background-image: url('../public/loading.gif');
   background-size: 80px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  iframe {
+    background-color: white;
   }
 }
 
@@ -147,8 +155,33 @@ body {
   //   }
   // }
 }
+.back-container {
+
+  button {
+    display:inline-block;
+    padding: 5px 15px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: $secondaryBlue;
+    text-align: center;
+    transition: all 0.3s;
+    border: 0;
+    &:hover {
+      background-color: $mainBlue;
+    }
+  }
+ 
+}
 
 .landing-page {
+
+  h2 {
+    color: white;
+  }
   h1 {
     margin: 0;
     color: white;
@@ -178,6 +211,11 @@ body {
       }
     }
   }
+}
+.day {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .day-list-container {
@@ -226,6 +264,9 @@ body {
         font-size: 12px;
         transition: all 0.2s ease-in;
         font-weight: bold;
+        &.Friday {
+          background-color: $primaryGreen;
+        }
       }
       .dow {
         padding: 30px 10px;
@@ -262,6 +303,11 @@ body {
   }
 }
 .locations-container {
+  &.metro-container {
+    .location-title {
+      background-color: $primaryGreen;
+    }
+  }
   border-right: 2px solid white;
   .location-item {
     position: relative;
@@ -297,6 +343,21 @@ body {
     }
   }
 }
+.day-list-content {
+  margin-bottom: 20px;
+  h2 {
+    color: $mainBlue;
+    font-size: 28px;
+  }
+  .green {
+    color: $primaryGreen;
+    font-weight: bold;
+  }
+  .blue {
+    color: $mainBlue;
+    font-weight: bold;
+  }
+}
 
 .button-container {
   padding: 25px 0;
@@ -320,7 +381,7 @@ body {
 
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   .locations-container {
     display: flex;
     // .location-title {

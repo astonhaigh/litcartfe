@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import DayList from './components/DayList';
 import LandingPage from './components/LandingPage';
 import BookSlot from './components/BookSlot';
+import BookSlotFriday from './components/BookSlotFriday';
+
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 // import { Link } from 'react-router-dom'
 import Day from './components/Day';
@@ -49,6 +51,8 @@ function App() {
         <Routes>
           <Route path="/days/:id" element={<Day />} />
           <Route path="/book-slot" element={<BookSlot />} />
+          <Route path="/book-a-slot-friday" element={<BookSlotFriday />} />
+          
         </Routes>
         
       </main>

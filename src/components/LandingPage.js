@@ -56,6 +56,10 @@ class LandingPage extends Component {
             </div> */}
           </div>
           <div className="day-list-container">
+            <div className="day-list-content">
+              <h2>Days available</h2>
+              <p>Days in <span className="blue">blue</span> are regular cart days. Days in <span className="green">green</span> are Metro days.</p>
+            </div>
               <DayList></DayList>
           </div>
         </div>
