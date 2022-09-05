@@ -202,32 +202,35 @@ class Day extends Component {
                       <h3>{locationGroups.locationTitle}</h3>
                     </div>
                     <div className="location-items">
-                      <div className="location-item">
-                        <div className="location-slot">8:00am - 9:00am:</div><div className="available">{locationGroups.locationFirstShift == 'Slot Available'? <span>*Slot Available*</span>: locationGroups.locationFirstShift}</div>
+                    <div className="location-item">
+                        <div className="location-slot">7:00am - 8:00am:</div><div className="available">{locationGroups.locationFirstShift == 'Slot Available'? <span>*Slot Available*</span>: locationGroups.locationFirstShift}</div>
                       </div>
                       <div className="location-item">
-                        <div className="location-slot">9:00am - 10:00am:</div><div className="available">{locationGroups.locationSecondShift == 'Slot Available'? <span>*Slot Available*</span>: locationGroups.locationSecondShift}</div>
+                        <div className="location-slot">8:00am - 9:00am:</div><div className="available">{locationGroups.locationSecondShift == 'Slot Available'? <span>*Slot Available*</span>: locationGroups.locationSecondShift}</div>
                       </div>
                       <div className="location-item">
-                        <div className="location-slot">10:00am - 11:00am:</div><div className="available">{locationGroups.locationThirdShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationThirdShift}</div>
+                        <div className="location-slot">9:00am - 10:00am:</div><div className="available">{locationGroups.locationThirdShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationThirdShift}</div>
                       </div>
                       <div className="location-item">
-                        <div className="location-slot">11:00am - 12:00pm:</div><div className="available">{locationGroups.locationFourthShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationFourthShift}</div>
+                        <div className="location-slot">10:00am - 11:00am:</div><div className="available">{locationGroups.locationFourthShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationFourthShift}</div>
                       </div>
                       <div className="location-item">
-                        <div className="location-slot">12:00pm - 1:00pm:</div><div className="available">{locationGroups.locationFifthShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationFifthShift}</div>
+                        <div className="location-slot">11:00am - 12:00pm:</div><div className="available">{locationGroups.locationFifthShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationFifthShift}</div>
                       </div>
                       <div className="location-item">
-                        <div className="location-slot">1:00pm - 2:00pm:</div><div className="available">{locationGroups.locationSixthShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationSixthShift}</div>
+                        <div className="location-slot">12:00pm - 1:00pm:</div><div className="available">{locationGroups.locationSixthShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationSixthShift}</div>
                       </div>
                       <div className="location-item">
-                        <div className="location-slot">2:00pm - 3:00pm:</div><div className="available">{locationGroups.locationSeventhShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationSeventhShift}</div>
+                        <div className="location-slot">1:00pm - 2:00pm:</div><div className="available">{locationGroups.locationSeventhShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationSeventhShift}</div>
                       </div>
                       <div className="location-item">
-                        <div className="location-slot">3:00pm - 4:00pm:</div><div className="available">{locationGroups.locationEighthShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationEighthShift}</div>
+                        <div className="location-slot">2:00pm - 3:00pm:</div><div className="available">{locationGroups.locationEighthShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationEighthShift}</div>
                       </div>
                       <div className="location-item">
-                        <div className="location-slot">4:00pm - 5:00pm:</div><div className="available">{locationGroups.locationNinthShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationNinthShift}</div>
+                        <div className="location-slot">3:00pm - 4:00pm:</div><div className="available">{locationGroups.locationNinthShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationNinthShift}</div>
+                      </div>
+                      <div className="location-item">
+                        <div className="location-slot">4:00pm - 5:00pm:</div><div className="available">{locationGroups.locationTenthShift == 'Slot Available'?<span>*Slot Available*</span>: locationGroups.locationTenthShift}</div>
                       </div>
                     </div>
                     
