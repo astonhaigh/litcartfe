@@ -2,7 +2,9 @@
 import './App.scss';
 import React, { Component } from 'react';
 import DayList from './components/DayList';
+import Location from './components/Location';
 import LandingPage from './components/LandingPage';
+import LocationLandingPage from './components/LocationLanding';
 import BookSlot from './components/BookSlot';
 import BookSlotFriday from './components/BookSlotFriday';
 
@@ -31,8 +33,14 @@ function App() {
                 </div>
               </div>
             </Link>
+            <div className="nav-block">
+              <ul>
+                <li><Link to="/cart-locations">Cart locations</Link></li>
+              </ul>
+            </div>
           </section>
           <section className="home">
+            
             <div className="home-button"><Link to="/"></Link></div>
           </section>
         </section>
@@ -42,6 +50,9 @@ function App() {
         <Routes>
           <Route path="/" exact element={<LandingPage />} />
         </Routes>
+        <Routes>
+          <Route path="/cart-locations" exact element={<LocationLandingPage />} />
+        </Routes>
       </div>
       </div>
       <main className="App-content">
@@ -50,6 +61,7 @@ function App() {
         </div>
         <Routes>
           <Route path="/days/:id" element={<Day />} />
+          <Route path="/location/:id" element={<Location />} />
           <Route path="/book-slot" element={<BookSlot />} />
           <Route path="/book-a-slot-friday" element={<BookSlotFriday />} />
           

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import DayList from './/DayList';
+import LocationList from './/LocationList';
 import { Link } from 'react-router-dom'
 
-class LandingPage extends Component {
+class LocationLandingPage extends Component {
   constructor(props) {
     super(props);
 
@@ -13,7 +13,7 @@ class LandingPage extends Component {
   }
 
   async componentDidMount() {
-    let response = await fetch("https://litcart.herokuapp.com/api/landing-page");
+    let response = await fetch("https://litcart.herokuapp.com/api/locations-landing-page");
     if (!response.ok) {
       return
     } 
@@ -28,7 +28,8 @@ class LandingPage extends Component {
     
     if (!this.state.loading) {
       
-      const landingP = this.state.landingPage.data.attributes;
+      const landingP = this.state.landingPage;
+      console.log(this.state.landingPage.data);
       return (
         
         <div className="landing-page">
@@ -37,30 +38,21 @@ class LandingPage extends Component {
             <div className='landing-intro'>
               <div className="intro-image">
                   <div className="image-el">
-                    <img src="./cal.svg" width="100%" />
+                    <img src="./loc.svg" width="100%" />
                   </div>
               </div>
               <div className="intro-content">
-              <h1>{landingP.landingTitle}</h1>
-                <p>{landingP.introContent}</p>
+              <h1>Cart Locations</h1>
+                <p>Find below the available cart locations, and information regarding cart placement, and directions.</p>
               </div>
               
             </div>
-            {/* <div className='landing-updates'>
-              <div className="updates-title">
-                <h3>Important updates/announcements:</h3>
-              </div>
-              <div className='updates-content'>
-                {landingP.updatesAnnouncements}
-              </div>
-            </div> */}
+           
           </div>
           <div className="day-list-container">
-            <div className="day-list-content">
-              <h2>Days available</h2>
-              <p>Days in <span className="blue">blue</span> are regular cart days. Days in <span className="green">green</span> are Special Campaign days.</p>
-            </div>
-              <DayList></DayList>
+            
+              <LocationList></LocationList>
+            
           </div>
         </div>
         
@@ -72,4 +64,4 @@ class LandingPage extends Component {
   }
 }
 
-export default LandingPage;
+export default LocationLandingPage;

@@ -105,7 +105,7 @@ body {
   padding: 10px;
   height: 55px;
   > section {
-    flex: 1;
+    // flex: 1;
     display: flex;
   }
   .logo-container {
@@ -113,6 +113,7 @@ body {
   }
   .home {
     justify-content: flex-end;
+    margin-left: auto;
   }
 }
 
@@ -378,10 +379,85 @@ body {
     }
   }
 }
+.location-info-item {
+  .location-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    a {
+      color: $mainBlue;
+      font-size: 17px;
+      font-weight: bold;
+    }
+  
+    .location-image {
+      border-radius: 20px;
+      background-size: cover;
+          background-position: center;
+          min-height: 400px;
+    }
+    .location-content {
+      box-sizing: border-box;
+      padding: 20px;
+    }
+    
+  }
+}
 
+
+.day_info {
+  a {
+    color: $mainBlue;
+  }
+} 
+
+  .nav-block {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        padding: 0;
+        margin: 0;
+        a {
+          color: white;
+          position: relative;
+          top: 7px;
+          padding-left: 30px;
+          &:before {
+            content: '|';
+            display: block;
+            position: absolute;
+            left: 13px;
+          }
+        }
+      }
+    }
+  }
 
 
 @media only screen and (min-width: 800px) {
+  // .nav-bar {
+
+  //   > section {
+  //     flex: 1;
+  //   }
+  // }
+  .location-info-item {
+    .location-title {
+      margin: 50px 0 70px;
+    }
+    .location-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+        > div {
+          flex: 1;
+          width: 50%;
+        }
+       
+    }
+  }
+ 
   .locations-container {
     display: flex;
     // .location-title {

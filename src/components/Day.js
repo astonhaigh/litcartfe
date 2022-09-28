@@ -150,7 +150,8 @@ class Day extends Component {
             
             <div className="day_info">
               <h2 className="day-title">{dotw} {monthName} {dateName}</h2>
-              {dotw == 'Friday'?<p>See below the schedule, locations in green are metro, and locations in blue are north carts.</p>: <p>See below the schedule, both available slots &amp; booked slots</p>}
+              {dotw == 'Friday'?<p>See below the schedule, both available slots &amp; booked slots.</p>: <p>See below the schedule, both available slots &amp; booked slots.</p>}
+              <p>To view details about the cart location such as cart setup and directions, please go to the  <Link to="/cart-locations">"Cart locations"</Link> page</p>
               
               <div className="location-intro">
                 <h3>Locations:</h3>
@@ -242,7 +243,7 @@ class Day extends Component {
               
             </div>
             <div className="button-container">
-            {dotw == 'Friday'?<Link to='/book-a-slot-friday'>Request Slot Friday</Link>: <Link to='/book-slot'>Request Slot</Link>}
+            {dotw == 'Friday'?<Link to='/book-a-slot-friday'>Book Cart Shift</Link>: <Link to='/book-slot'>Request Slot</Link>}
             </div>
           </div>
         );
